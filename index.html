@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambrel — Eau de Parfum | 3D Scroll Demo by Websitopedia</title>
+  <meta name="description" content="A scroll-driven 3D product website built with Three.js. Demo by Harikrishna | Websitopedia.">
+  <meta name="theme-color" content="#0c0a09">
+
+  <!-- Open Graph (link previews on WhatsApp, LinkedIn, X) -->
+  <meta property="og:title" content="Ambrel — 3D Scroll Website Demo">
+  <meta property="og:description" content="Real-time 3D built in code with Three.js. Scroll to take the bottle apart.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Three.js loaded as an ES module from a CDN (pinned version) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true"><span>AMBREL</span></div>
+
+  <canvas id="scene" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a href="#hero" class="logo">AMBREL</a>
+    <nav>
+      <a href="#notes">Notes</a>
+      <a href="#craft">Craft</a>
+      <a href="#cta" class="nav-btn">Order</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. HERO -->
+    <section id="hero" class="panel left">
+      <div class="copy">
+        <p class="eyebrow">Eau de Parfum · Nº 7</p>
+        <h1>Bottled<br><em>golden hour.</em></h1>
+        <p class="lead">Amber, rose and smoked oud, distilled in small batches. Scroll to look inside.</p>
+        <a href="#notes" class="btn">Discover the notes</a>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><span></span>Scroll</div>
+    </section>
+
+    <!-- 2. NOTES (bottle comes apart) -->
+    <section id="notes" class="panel right">
+      <div class="copy">
+        <p class="eyebrow reveal">The composition</p>
+        <h2 class="reveal">Three notes,<br>one signature.</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <span class="dot" style="--c:#f6d365"></span>
+            <h3>Top · Bergamot</h3>
+            <p>A bright citrus opening that lifts in the first few minutes.</p>
+          </article>
+          <article class="card reveal">
+            <span class="dot" style="--c:#e07a8f"></span>
+            <h3>Heart · Damask Rose</h3>
+            <p>Soft and warm, it settles in after the first hour.</p>
+          </article>
+          <article class="card reveal">
+            <span class="dot" style="--c:#a0643c"></span>
+            <h3>Base · Smoked Oud</h3>
+            <p>A deep, resinous trail that stays into the evening.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CRAFT (bottle reassembles, camera orbits) -->
+    <section id="craft" class="panel left">
+      <div class="copy">
+        <p class="eyebrow reveal">The craft</p>
+        <h2 class="reveal">Made slowly,<br>by hand.</h2>
+        <ul class="stats">
+          <li class="reveal"><strong>90</strong><span>days of maceration</span></li>
+          <li class="reveal"><strong>8</strong><span>facets, hand-polished glass</span></li>
+          <li class="reveal"><strong>24k</strong><span>gold-plated cap</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. CTA -->
+    <section id="cta" class="panel center">
+      <div class="copy">
+        <p class="eyebrow reveal">Limited first edition</p>
+        <h2 class="reveal">Make it yours.</h2>
+        <p class="lead reveal">50 ml · ₹ 6,900</p>
+        <a href="#hero" class="btn reveal">Reserve a bottle</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="built">Built by <strong>Harikrishna</strong> | <a href="https://www.instagram.com/harikrishna_websitopedia/" target="_blank" rel="noopener">Websitopedia</a></p>
+    <p class="small">Ambrel is a fictional brand made for this demo. The 3D scene is built in code with Three.js. No images or video are used.</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
